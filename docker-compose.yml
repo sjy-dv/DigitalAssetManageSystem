@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  bigchaindb:
+    image: bigchaindb/bigchaindb
+    ports:
+      - "9984:9984"
+      - "27017:27017"
+    volumes:
+      - bigchaindb_data:/data/db
+
+volumes:
+  bigchaindb_data:
